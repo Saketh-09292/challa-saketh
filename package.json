@@ -3,21 +3,24 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://challa-saketh.github.io/challa-saketh",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^6.21.1",
-    "@uidotdev/usehooks": "^2.4.1",
-    "react-icons": "^5.0.0",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "framer-motion": "^11.0.3"
+    "@uidotdev/usehooks": "^2.4.1",
+    "framer-motion": "^11.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.0.0",
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
@@ -27,6 +30,7 @@
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "vite": "^6.3.1"
   }
