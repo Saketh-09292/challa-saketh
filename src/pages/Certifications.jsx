@@ -13,7 +13,7 @@ const Certifications = () => {
       issuer: "FIA Business School",
       date: "March 2023",
       description: "Comprehensive certification covering core concepts of digital marketing including search, social media, and content marketing.",
-      image: "././assets/macro economics for business management.jpg",
+      image: `${import.meta.env.BASE_URL}assets/macro economics for business management.jpg`,
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const Certifications = () => {
       issuer: "Harvard Manage Mentor",
       date: "Feb 2025",
       description: "In-depth course on developing effective business strategies, market analysis, and competitive positioning.",
-      image: "././assets/business case development certificate.jpg",
+      image: `${import.meta.env.BASE_URL}assets/business case development certificate.jpg`,
     },
     {
       id:3,
@@ -29,7 +29,7 @@ const Certifications = () => {
       issuer: "Google",
       date: "Aug 2020",
       description: "This course provided a strong foundation in Python programming, covering essential topics such as variables, loops, conditionals, functions, and error handling. It also included practical exercises to build real-world skills in writing Python scripts and automating tasks.",
-      image: "././assets/pythonCert.png"
+      image: `${import.meta.env.BASE_URL}assets/pythonCert.png`
     },
     {
       id:4,
@@ -37,7 +37,7 @@ const Certifications = () => {
       issuer:"University of Michigan",
       date:"April 2020",
       description:"The certificate verifies a strong foundation in professional writing techniques, editorial standards, and content clarity—skills applicable across academic, creative, and workplace communications.",
-      image:"././assets/writing and editing cert.png"
+      image:`${import.meta.env.BASE_URL}assets/writing and editing cert.png`
     }
   ];
 
