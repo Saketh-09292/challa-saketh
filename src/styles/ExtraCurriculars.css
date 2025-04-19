@@ -1,0 +1,312 @@
+.extracurriculars-page {
+  padding-top: 2rem;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.activities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.activity-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(207, 15, 71, 0.05) 0%, rgba(83, 91, 242, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(100, 108, 255, 0.4);
+}
+
+.activity-card:hover::before {
+  opacity: 1;
+}
+
+.activity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(100, 108, 255, 0.1);
+  border-radius: 50%;
+  color: #CF0F47;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.activity-card:hover .activity-icon {
+  background: rgba(207, 15, 71, 0.15);
+  transform: scale(1.1);
+}
+
+.activity-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.activity-content h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  display: inline-block;
+}
+
+.activity-content h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #CF0F47, #535bf2);
+  border-radius: 2px;
+}
+
+.activity-description {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+.activity-details {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-details li {
+  padding: 0.8rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.activity-details li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #CF0F47;
+  font-size: 1.2rem;
+}
+
+.activity-details li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.interests-section {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -10px;
+  height: 4px;
+  width: 50%;
+  background: linear-gradient(90deg, #CF0F47, #535bf2);
+  border-radius: 2px;
+}
+
+.interests-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.interest-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.interest-icon {
+  margin-bottom: 1.5rem;
+  color: #CF0F47;
+  font-size: 2rem;
+}
+
+.interest-item h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.interest-item p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.quote-section {
+  margin: 5rem 0 2rem;
+  text-align: center;
+  padding: 3rem;
+  background: rgba(100, 108, 255, 0.05);
+  border-radius: 12px;
+}
+
+.quote-section blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-section blockquote:before,
+.quote-section blockquote:after {
+  content: "\201C"; /* Fixed: Using proper CSS escape sequence for left double quote */
+  font-size: 3rem;
+  color: #CF0F47;
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+}
+
+.quote-section blockquote:after {
+  content: "\201D"; /* Fixed: Using proper CSS escape sequence for right double quote */
+}
+
+.quote-section cite {
+  font-style: normal;
+  font-weight: 600;
+  color: #CF0F47;
+}
+
+@media (prefers-color-scheme: light) {
+  .page-header p {
+    color: rgba(33, 53, 71, 0.7);
+  }
+  
+  .activity-card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .activity-content h3 {
+    color: rgba(33, 53, 71, 0.95);
+  }
+  
+  .activity-description {
+    color: rgba(33, 53, 71, 0.8);
+  }
+  
+  .activity-details li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(33, 53, 71, 0.7);
+  }
+  
+  .interest-item {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .interest-item p {
+    color: rgba(33, 53, 71, 0.7);
+  }
+  
+  .quote-section {
+    background: rgba(100, 108, 255, 0.05);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .activity-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .activity-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+  
+  .activity-content h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .activity-content h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .quote-section blockquote {
+    font-size: 1.2rem;
+  }
+}

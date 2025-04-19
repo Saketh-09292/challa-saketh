@@ -1,0 +1,470 @@
+.home-page {
+  width: 100%;
+}
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  margin-top: -80px; /* Adjust based on navbar height */
+}
+
+.hero-content {
+  max-width: 800px;
+  opacity: 1; /* Changed from 0 to ensure text is visible by default */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 60px; /* Add space for scroll button */
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  opacity: 1; /* Changed from 0 to ensure text is visible by default */
+}
+
+.highlight {
+  color: #CF0F47;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(135deg, #CF0F47 0%, #535bf2 100%);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1; /* Changed from 0 to ensure text is visible by default */
+}
+
+.hero-cta {
+  margin-top: 2rem;
+  opacity: 1; /* Changed from 0 to ensure text is visible by default */
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-right {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .icon-right {
+  transform: translateX(5px);
+}
+
+.about-section, 
+.expertise-section,
+.cta-section {
+  padding: 5rem 0;
+  opacity: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.expertise-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.expertise-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(207, 15, 71, 0.05) 0%, rgba(83, 91, 242, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(207, 15, 71, 0.2);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.expertise-card:hover::before {
+  opacity: 1;
+}
+
+.expertise-icon {
+  margin-bottom: 1.5rem;
+  color: #CF0F47;
+  background: rgba(207, 15, 71, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.expertise-card:hover .expertise-icon {
+  background: rgba(207, 15, 71, 0.15);
+  transform: scale(1.1);
+}
+
+.expertise-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+}
+
+.expertise-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.expertise-card .learn-more {
+  color: #CF0F47;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.expertise-card .learn-more:hover {
+  gap: 0.75rem;
+  color: #535bf2;
+}
+
+.cta-section {
+  text-align: center;
+  background: linear-gradient(135deg, #CF0F47 0%, #535bf2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  margin: 0 2rem;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-section .btn-primary {
+  background: white;
+  color: #CF0F47;
+  border: none;
+}
+
+.cta-section .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add a class with delayed animation for sequencing */
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-900 {
+  animation-delay: 0.9s;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.hero-image-container {
+  flex: 0 0 280px;
+  position: relative;
+}
+
+.hero-image {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 4px solid transparent;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: morph 15s ease-in-out infinite;
+  background: 
+    linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #CF0F47, #535bf2) border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+.hero-text-content {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+@media (prefers-color-scheme: light) {
+  .hero-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(249, 249, 249, 0.95)),
+                url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  }
+  
+  .hero-subtitle {
+    color: rgba(33, 53, 71, 0.8);
+  }
+  
+  .expertise-card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .expertise-card p {
+    color: rgba(33, 53, 71, 0.8);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 6rem 1rem 2rem;
+    margin-top: 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .scroll-down-btn {
+    display: none !important;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-image-container {
+    flex: 0 0 220px;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-text-content {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .hero-cta {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem; /* Add space between CTA and scroll button */
+  }
+
+  .about-section, 
+  .expertise-section,
+  .cta-section {
+    padding: 3rem 1rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .cta-section {
+    margin: 0 1rem;
+    padding: 3rem 1rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .expertise-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .expertise-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .expertise-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .expertise-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .expertise-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Scroll Down Button Styles */
+.scroll-down-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.scroll-down-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.scroll-down-icon {
+  color: white;
+  font-size: 24px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.delay-1200 {
+  animation-delay: 1.2s;
+}

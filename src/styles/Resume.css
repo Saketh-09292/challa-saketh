@@ -1,0 +1,385 @@
+.resume-page {
+  padding-top: 2rem;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+}
+
+.resume-header.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.resume-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.resume-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resume-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.resume-section {
+  position: relative;
+  padding-left: 3rem;
+  opacity: 0;
+}
+
+.resume-section.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.section-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(100, 108, 255, 0.1);
+  border-radius: 50%;
+  color: #CF0F47;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+  margin-left: 30px;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 2rem 2rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+}
+
+.timeline-item.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.timeline-item.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.timeline-item.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.timeline-item.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #CF0F47;
+  left: -38px;
+  top: 10px;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.institution {
+  color: #CF0F47;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.period {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.timeline-content li {
+  margin-bottom: 0.5rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem 0;
+  padding: 0 1rem;
+}
+
+.skills-category {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-category:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(207, 15, 71, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skills-category:hover {
+  transform: translateY(-5px);
+  border-color: rgba(207, 15, 71, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skills-category:hover:before {
+  opacity: 1;
+}
+
+.skills-category h3 {
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #CF0F47;
+  font-weight: 600;
+}
+
+.skills-category h3:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #CF0F47;
+  transition: width 0.3s ease;
+}
+
+.skills-category:hover h3:after {
+  width: 100%;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skills-list li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: transform 0.2s ease;
+}
+
+.skills-list li:hover {
+  transform: translateX(5px);
+}
+
+.skills-list li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #CF0F47;
+  font-size: 1.5rem;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+.skill-name {
+  font-weight: 500;
+}
+
+.skill-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background: linear-gradient(90deg, #CF0F47, #535bf2);
+  border-radius: 4px;
+  width: 0;
+  transition: width 1s ease;
+}
+
+.skill-level-85 {
+  width: 85%;
+}
+
+.skill-level-80 {
+  width: 80%;
+}
+
+.skill-level-75 {
+  width: 75%;
+}
+
+.skill-level-90 {
+  width: 90%;
+}
+
+.skill-level-88 {
+  width: 88%;
+}
+
+@media (prefers-color-scheme: light) {
+  .resume-header p {
+    color: rgba(33, 53, 71, 0.7);
+  }
+  
+  .timeline:before {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-content {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .period {
+    color: rgba(33, 53, 71, 0.6);
+  }
+  
+  .skill-bar {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .skills-category {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .skills-list li {
+    color: rgba(33, 53, 71, 0.9);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resume-page {
+    padding: 1rem;
+    margin: 100px auto;
+  }
+  
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+  
+  .resume-section {
+    padding-left: 2.5rem;
+  }
+  
+  .timeline {
+    margin-left: 15px;
+  }
+  
+  .timeline:before {
+    left: -15px;
+  }
+  
+  .timeline-item:before {
+    left: -23px;
+  }
+  
+  .timeline-item {
+    padding-left: 1rem;
+  }
+  
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+  }
+  
+  .skills-category {
+    padding: 2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
