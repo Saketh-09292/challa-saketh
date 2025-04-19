@@ -44,7 +44,7 @@ const Home = () => {
         <div className={`hero-content ${isVisible ? 'animate-fade-in' : ''}`} style={{ opacity: isVisible ? 1 : 0.9 }}>
           <div className="hero-image-container">
             <img 
-              src={`${import.meta.env.BASE_URL}assets/profile pic.jpg`} 
+              src="/challa-saketh/assets/profile pic.jpg" 
               alt="Challa Saketh - Business Professional" 
               className={`hero-image ${isVisible ? 'animate-fade-in delay-200' : ''}`}
               style={{ opacity: isVisible ? 1 : 0.9 }}
