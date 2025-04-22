@@ -51,7 +51,7 @@ const Resume = () => {
               <div className="timeline-content">
                 <h3>Intermediate Education</h3>
                 <p className="institution">Alphores Junior College – Karimnagar</p>
-                <p className="period">2021 - 2022</p>
+                <p className="period">2020 - 2022</p>
                 <p>Successfully completed intermediate education with excellent academic record.</p>
               </div>
             </div>
