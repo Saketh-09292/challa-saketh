@@ -9,18 +9,19 @@ import Resume from './pages/Resume'
 import Projects from './pages/Projects'
 import Certifications from './pages/Certifications'
 import ExtraCurriculars from './pages/ExtraCurriculars'
+import Recommendations from './pages/Recommendations'
 
 function App() {
   return (
     <div className="app-container">
       <ScrollToTop />
       <Navbar />
-      <main className="content">
-        <Routes>
+      <main className="content">        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/certifications" element={<Certifications />} />
+          <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/extracurriculars" element={<ExtraCurriculars />} />
         </Routes>
       </main>

@@ -31,12 +31,12 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  
-  const navItems = [
+    const navItems = [
     { path: '/', label: 'Home' },
     { path: '/resume', label: 'Resume' },
     { path: '/projects', label: 'Projects' },
     { path: '/certifications', label: 'Certifications' },
+    { path: '/recommendations', label: 'Recommendations' },
     { path: '/extracurriculars', label: 'Extra Curriculars' },
   ];
 

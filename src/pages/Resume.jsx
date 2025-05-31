@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { FaDownload, FaGraduationCap, FaBriefcase, FaTools } from 'react-icons/fa';
+import { FaDownload, FaGraduationCap, FaBriefcase, FaTools, FaPlay } from 'react-icons/fa';
 import { useIntersectionObserver } from '@uidotdev/usehooks';
+import { motion } from 'framer-motion';
 import '../styles/Resume.css';
 
 const Resume = () => {
@@ -12,8 +13,7 @@ const Resume = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
-  
-  return (
+    return (
     <div className="resume-page">
       {/* <div className={`resume-header ${isVisible ? 'animate-fade-in' : ''}`}>
         <h1>Resume</h1>
@@ -22,6 +22,45 @@ const Resume = () => {
           <FaDownload /> Download Resume
         </a>
       </div> */}
+        <motion.div 
+        className="intro-video-section"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="section-title">My Introduction</h2>
+        <motion.div 
+          className="video-container"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >          <div className="video-wrapper">
+            <video 
+              controls
+              playsInline
+              preload="auto"
+              poster="/challa-saketh/assets/profile pic.jpg"
+              className="intro-video"
+            >
+              <source src="/challa-saketh/assets/intro_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="play-indicator">
+              <FaPlay size={30} />
+            </div>
+          </div>
+          
+          <motion.div 
+            className="video-text"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <h3>Hello, I'm Challa Saketh</h3>
+            <p>Watch this short introduction to learn more about my background, skills, and professional aspirations.</p>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
       <div className="resume-content">
         <section 

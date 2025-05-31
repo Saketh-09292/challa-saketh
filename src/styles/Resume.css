@@ -4,6 +4,125 @@
   margin: 20px auto;
 }
 
+.intro-video-section {
+  margin-bottom: 4rem;
+  opacity: 0;
+}
+
+.intro-video-section.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.intro-video-section .section-title {
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.intro-video-section .section-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background: #CF0F47;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 1.5rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.intro-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.play-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(207, 15, 71, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.video-wrapper:hover .play-indicator {
+  opacity: 1;
+}
+
+.video-text {
+  width: 100%;
+  text-align: center;
+  max-width: 600px;
+}
+
+.video-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #CF0F47;
+}
+
+.video-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.video-tip {
+  display: flex;
+  align-items: center;
+  color: #CF0F47;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.video-tech-note {
+  font-size: 0.85rem !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin-top: 1rem !important;
+  font-style: italic;
+}
+
 .resume-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -330,6 +449,20 @@
   .skills-list li {
     color: rgba(33, 53, 71, 0.9);
   }
+  
+  .video-container {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .video-text p {
+    color: rgba(33, 53, 71, 0.8);
+  }
+  
+  .intro-video-section .section-title {
+    color: #333;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -370,6 +503,19 @@
   
   .skills-category {
     padding: 2rem;
+  }
+  .video-container {
+    padding: 1.5rem;
+  }
+  
+  .video-wrapper {
+    width: 280px;
+    height: 450px;
+  }
+  
+  .video-text {
+    width: 100%;
+    padding: 0 1rem;
   }
 }
 
