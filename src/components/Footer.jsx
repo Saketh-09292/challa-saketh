@@ -20,18 +20,20 @@ const Footer = () => {
               <p><FaPhone /> 8247738585</p>
             </div>
           </div>
-          
-          {/* <div className="footer-section">
+            <div className="footer-section">
             <h3>Connect</h3>
             <div className="social-icons">
-              <a href="#" aria-label="GitHub profile">
-                <FaGithub size={24} />
+              <a href="https://www.linkedin.com/in/challa-saketh-b52085365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 aria-label="LinkedIn profile">
+                <FaLinkedin size={24} />
               </a>
               <a href="mailto:challasaketh123@gmail.com" aria-label="Email">
                 <FaEnvelope size={24} />
               </a>
             </div>
-          </div> */}
+          </div>
         </div>
         
         <div className="footer-bottom">
